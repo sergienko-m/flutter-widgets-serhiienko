@@ -66,33 +66,3 @@ docs/          THEORY.md, ARCHITECTURE.md, SUBMISSION_CHECKLIST.md
 scripts/       setup_codespaces.sh, make_commits.sh
 ```
 
-## Документація
-
-* [Теорія (Stateless/Stateful, layout, списки, Material, Cupertino, lifecycle)](docs/THEORY.md)
-* [Архітектура, діаграми, state flow, API contract](docs/ARCHITECTURE.md)
-
----
-
-## 🤖 Декларація використання ШІ
-
-* **Інструмент ШІ:** Claude (Anthropic).
-* **Мета використання:** згенерувати початковий каркас проєкту за завданням практичної роботи 5:
-  код віджетів, екранів, `AppState`, тестів, CI-конфігурації та чернетки документації
-  (`docs/THEORY.md`, `docs/ARCHITECTURE.md`), а також скрипти для налаштування Codespaces,
-  розбиття на коміти й формування звіту покриття.
-* **Текстовий запит (промпт):** _«[додана PDF практичної роботи 5] Stateless vs Stateful віджети:
-  відмінності та використання. Layout віджети: Container, Row, Column, Stack, Positioned. Списки:
-  ListView, GridView, CustomScrollView. Material Design компоненти: AppBar, Scaffold, Button, Card,
-  Dialog. Cupertino (iOS-style) віджети. Створення власних custom віджетів. Lifecycle методи віджетів.
-  виконай це завдання повністю правильно»_ та подальші уточнювальні запити щодо налаштування
-  репозиторію, Codespaces, GitHub Pages і збірки APK.
-* **Які фрагменти увійшли до роботи:** увесь код у `lib/`, тести в `test/` та `integration_test/`,
-  документація в `docs/`, скрипти в `scripts/` і workflow в `.github/workflows/` згенеровані ШІ;
-  логіку віджетів, екранів і тестів використано без змін.
-* **Власне доопрацювання:**
-  * створив публічний репозиторій, налаштував GitHub Codespaces і встановив Flutter SDK;
-  * запустив `flutter analyze` (No issues found) та `flutter test` (34 тести пройдено);
-  * розклав проєкт на логічні коміти та відправив їх на GitHub;
-  * налаштував GitHub Pages (Source: GitHub Actions), перевірив збірку й деплой, додав посилання на демо;
-  * сформував звіт покриття тестами та зібрав APK через GitHub Actions;
-  * вказав автора та посилання в README.
