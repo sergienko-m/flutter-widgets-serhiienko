@@ -6,7 +6,7 @@
 Застосунок демонструє власні Stateless/Stateful віджети, анімації, простий state management
 (`ChangeNotifier` + `InheritedNotifier`), адаптивну верстку, тести та деплой.
 
-**Live demo:** _[вставте посилання на GitHub Pages після деплою]_
+**Live demo:** https://sergienko-m.github.io/flutter-widgets-serhiienko/
 
 ## Запуск
 
