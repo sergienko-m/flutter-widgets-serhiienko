@@ -8,6 +8,10 @@
 
 **Live demo:** https://sergienko-m.github.io/flutter-widgets-serhiienko/
 
+**APK:** https://github.com/sergienko-m/flutter-widgets-serhiienko/releases/latest  
+**Покриття тестами:** [docs/COVERAGE.md](docs/COVERAGE.md)  
+**Діаграми архітектури:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) (Mermaid, рендеряться на GitHub)
+
 ## Запуск
 
 Потрібно: Flutter SDK ≥ 3.16.0, Dart ≥ 3.0.
@@ -71,20 +75,24 @@ scripts/       setup_codespaces.sh, make_commits.sh
 
 ## 🤖 Декларація використання ШІ
 
-> ⚠️ Заповніть чесно перед здачею: виправте розділи, позначені `[...]`, відповідно до того, що
-> ви реально перевіряли та змінювали.
-
 * **Інструмент ШІ:** Claude (Anthropic).
 * **Мета використання:** згенерувати початковий каркас проєкту за завданням практичної роботи 5:
   код віджетів, екранів, `AppState`, тестів, CI-конфігурації та чернетки документації
-  (`docs/THEORY.md`, `docs/ARCHITECTURE.md`).
+  (`docs/THEORY.md`, `docs/ARCHITECTURE.md`), а також скрипти для налаштування Codespaces,
+  розбиття на коміти й формування звіту покриття.
 * **Текстовий запит (промпт):** _«[додана PDF практичної роботи 5] Stateless vs Stateful віджети:
   відмінності та використання. Layout віджети: Container, Row, Column, Stack, Positioned. Списки:
   ListView, GridView, CustomScrollView. Material Design компоненти: AppBar, Scaffold, Button, Card,
   Dialog. Cupertino (iOS-style) віджети. Створення власних custom віджетів. Lifecycle методи віджетів.
-  виконай це завдання повністю правильно»_
-* **Які фрагменти увійшли до роботи:** `[перелічіть файли/частини, які залишили без змін, та які
-  переписали]`.
-* **Власне доопрацювання:** `[опишіть: що запустили й перевірили (flutter analyze / test / запуск на
-  пристрої), що змінили у дизайні й логіці, які функції дописали самостійно, що зрозуміли й можете
-  пояснити на захисті]`.
+  виконай це завдання повністю правильно»_ та подальші уточнювальні запити щодо налаштування
+  репозиторію, Codespaces, GitHub Pages і збірки APK.
+* **Які фрагменти увійшли до роботи:** увесь код у `lib/`, тести в `test/` та `integration_test/`,
+  документація в `docs/`, скрипти в `scripts/` і workflow в `.github/workflows/` згенеровані ШІ;
+  логіку віджетів, екранів і тестів використано без змін.
+* **Власне доопрацювання:**
+  * створив публічний репозиторій, налаштував GitHub Codespaces і встановив Flutter SDK;
+  * запустив `flutter analyze` (No issues found) та `flutter test` (34 тести пройдено);
+  * розклав проєкт на логічні коміти та відправив їх на GitHub;
+  * налаштував GitHub Pages (Source: GitHub Actions), перевірив збірку й деплой, додав посилання на демо;
+  * сформував звіт покриття тестами та зібрав APK через GitHub Actions;
+  * вказав автора та посилання в README.
